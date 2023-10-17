@@ -15,7 +15,11 @@
     "shared-module": "workspace:0.0.0",
     "typescript": "^5.2.2"
   },
+  "useWorkspaces": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
 }
