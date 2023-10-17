@@ -11,6 +11,12 @@ importers:
       lerna:
         specifier: ^7.3.1
         version: 7.3.1
+      shared-module:
+        specifier: workspace:0.0.0
+        version: link:packages/shared-module
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
 
   packages/next1:
     dependencies:
@@ -100,6 +106,8 @@ importers:
       typescript:
         specifier: ^5.1.6
         version: 5.2.2
+
+  packages/shared-module: {}
 
 packages:
 

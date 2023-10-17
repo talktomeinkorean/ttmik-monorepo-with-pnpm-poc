@@ -28,9 +28,29 @@ vi ~/.zshrc
 alias pn=pnpm
 ```
 
+5. 패키지 의존성 추가
+
+```
+cd next1/
+pnpm add -w shared-module@0.0.0
+
+```
+
+6. root에 npm 설치하기
+
+```
+ pn install typescript  --ignore-workspace-root-check  
+```
 
 
 ## 참고 문서/영상링크
 
 1. [우아콘 2022] 우리는 하나다! 모노레포 with pnpm
 https://velog.io/@dbwjd5864/%EC%9A%B0%EC%95%84%EC%BD%98-2022-%EC%9A%B0%EB%A6%AC%EB%8A%94-%ED%95%98%EB%82%98%EB%8B%A4-%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-with-pnpm
+
+
+## lerna
+
+```
+npx lerna create [프로젝트명]
+``````
