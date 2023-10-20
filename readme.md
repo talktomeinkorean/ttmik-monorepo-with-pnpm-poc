@@ -1,4 +1,4 @@
-# pnpm + yarn workspace + lerna 로 모노레포 구축 poc
+# pnpm + yarn workspace +  로 모노레포 구축 poc
 
 ## pnpm
 
@@ -67,3 +67,4 @@ pnpm changeset init
 ```
 npx lerna create [프로젝트명]
 ``````
+개발자 번 아웃으로 개발 중단 .... 

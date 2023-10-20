@@ -5,20 +5,16 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "lerna run --parallel dev"
+    "next1": "pnpm -F next1 dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lerna": "^7.3.1",
-    "shared-module": "workspace:0.0.0",
+    "shared-module": "workspace:*",
     "typescript": "^5.2.2"
   },
   "useWorkspaces": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@changesets/cli": "^2.26.2"
   }
