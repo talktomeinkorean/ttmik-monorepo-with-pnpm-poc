@@ -11,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "shared-module": "workspace:*",
     "typescript": "^5.2.2"
   },
   "useWorkspaces": true,
