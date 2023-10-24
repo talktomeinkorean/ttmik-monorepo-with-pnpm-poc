@@ -30,25 +30,26 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: 'us-east-1'
 
-    - name: Change directory to packages/next1 and find out directory
-      run: |
-        cd packages/next1
+    # - name: Change directory to packages/next1 and find out directory
+    #   run: |
+    #     cd packages/next1
 
     - name: Deploy with pnpm
       run: |
-        pnpm run deploy
+        pnpm run next1-deploy
 
-    # - name: Check next out folder exists and 
-    #   run: |
-    #     ls out
-    #     if [ ! -d "out" ]; then
-    #       echo "Directory out does not exist."
-    #       exit 1
-    #     fi
+    - name: Check next out folder exists and 
+      run: |
+        cd packages/next1
+        ls out
+        if [ ! -d "out" ]; then
+          echo "Directory out does not exist."
+          exit 1
+        fi
 
     - name: Deploy to S3
       run: |
-        aws s3 sync out s3://ttmik-next-frontend-cdn-s3-dev-bucket
+        aws s3 sync packages/next1/out s3://ttmik-next-frontend-cdn-s3-dev-bucket
 
     - name: Invalidation to CloudFront
       run: |
