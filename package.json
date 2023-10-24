@@ -6,8 +6,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "next1-dev": "pnpm -F next1 dev",
-    "aws-next1-build": "pnpm -F next1 build",
-    "dev": "pnpm -r --incloude .@next1 --incloude ./packages/remix1 foreach --parallel run dev"
+    "next1-deploy": "pnpm --filter next1 run deploy"
   },
   "keywords": [],
   "author": "",

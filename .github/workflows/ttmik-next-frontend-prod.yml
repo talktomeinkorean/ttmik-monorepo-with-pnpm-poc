@@ -24,7 +24,7 @@ jobs:
       run: pnpm install --frozen-lockfile
       
     - name: Deploy
-      run: pnpm run deploy
+      run: pnpm run next1-deploy
       
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
