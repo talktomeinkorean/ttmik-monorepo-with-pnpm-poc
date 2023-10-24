@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "next1": "pnpm -F next1 dev"    
+    "next1": "pnpm -F next1 dev",
+    "dev" : "pnpm -r --incloude .@next1 --incloude ./packages/remix1 foreach --parallel run dev"
+    
   },
   "keywords": [],
   "author": "",
