@@ -7,6 +7,7 @@ on:
     branches:
       - main # Set a branch name to trigger deployment
 
+  workflow_dispatch: # Manually trigger the workflow
 
 jobs:
   build_and_deploy:
