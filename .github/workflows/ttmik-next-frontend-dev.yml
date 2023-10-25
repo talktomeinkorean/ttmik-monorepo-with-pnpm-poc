@@ -1,11 +1,11 @@
-name: ttmik-next-frontend-prod
+name: ttmik-next-frontend-dev
 
 on:
   push:
     paths:
       - 'packages/next1/**'  
     branches:
-      - main # Set a branch name to trigger deployment
+      - dev # Set a branch name to trigger deployment
 
   workflow_dispatch: # Manually trigger the workflow
 
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     
     environment: 
-      name: prod # Replace "Production" with the name of the environment you've set up
+      name: dev # Replace "Production" with the name of the environment you've set up
     
     steps:
     - uses: pnpm/action-setup@v2
