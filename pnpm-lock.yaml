@@ -48,6 +48,51 @@ importers:
 
   packages/common-components:
     dependencies:
+      '@common/hooks':
+        specifier: workspace:*
+        version: link:../common-hooks
+      '@common/styles':
+        specifier: workspace:*
+        version: link:../common-styles
+      '@testing-library/jest-dom':
+        specifier: ^5.17.0
+        version: 5.17.0
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/user-event':
+        specifier: ^13.5.0
+        version: 13.5.0(@testing-library/dom@8.20.1)
+      '@types/jest':
+        specifier: ^27.5.2
+        version: 27.5.2
+      '@types/node':
+        specifier: ^16.18.59
+        version: 16.18.59
+      '@types/react':
+        specifier: ^18.2.31
+        version: 18.2.31
+      '@types/react-dom':
+        specifier: ^18.2.14
+        version: 18.2.14
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-scripts:
+        specifier: 5.0.1
+        version: 5.0.1(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(eslint@8.51.0)(react@18.2.0)(typescript@4.9.5)
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      web-vitals:
+        specifier: ^2.1.4
+        version: 2.1.4
+
+  packages/common-hooks:
+    dependencies:
       '@common/styles':
         specifier: workspace:*
         version: link:../common-styles
@@ -132,15 +177,33 @@ importers:
       '@common/components':
         specifier: workspace:*
         version: link:../common-components
+      '@common/hooks':
+        specifier: workspace:*
+        version: link:../common-hooks
+      css-loader:
+        specifier: ^6.8.1
+        version: 6.8.1(webpack@5.89.0)
       next:
         specifier: 13.5.4
         version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
+      next-compose-plugins:
+        specifier: ^2.2.1
+        version: 2.2.1
+      next-transpile-modules:
+        specifier: ^10.0.1
+        version: 10.0.1
+      postcss-loader:
+        specifier: ^7.3.4
+        version: 7.3.4(postcss@8.4.31)(typescript@5.2.2)(webpack@5.89.0)
       react:
         specifier: ^18
         version: 18.2.0
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
+      style-loader:
+        specifier: ^3.3.3
+        version: 3.3.3(webpack@5.89.0)
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -5542,6 +5605,22 @@ packages:
       yaml: 1.10.2
     dev: false
 
+  /cosmiconfig@8.3.6(typescript@5.2.2):
+    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      import-fresh: 3.3.0
+      js-yaml: 4.1.0
+      parse-json: 5.2.0
+      path-type: 4.0.0
+      typescript: 5.2.2
+    dev: false
+
   /cross-spawn@5.1.0:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
     dependencies:
@@ -10158,6 +10237,16 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
+  /next-compose-plugins@2.2.1:
+    resolution: {integrity: sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==}
+    dev: false
+
+  /next-transpile-modules@10.0.1:
+    resolution: {integrity: sha512-4VX/LCMofxIYAVV58UmD+kr8jQflpLWvas/BQ4Co0qWLWzVh06FoZkECkrX5eEZT6oJFqie6+kfbTA3EZCVtdQ==}
+    dependencies:
+      enhanced-resolve: 5.15.0
+    dev: false
+
   /next@13.5.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-+93un5S779gho8y9ASQhb/bTkQF17FNQOtXLKAj3lsNgltEcF0C5PMLLncDmH+8X1EnJH1kbqAERa29nRXqhjA==}
     engines: {node: '>=16.14.0'}
@@ -11034,6 +11123,22 @@ packages:
       postcss: 8.4.31
       semver: 7.5.4
       webpack: 5.89.0
+    dev: false
+
+  /postcss-loader@7.3.4(postcss@8.4.31)(typescript@5.2.2)(webpack@5.89.0):
+    resolution: {integrity: sha512-iW5WTTBSC5BfsBJ9daFMPVrLT36MrNiC6fqOZTTaHjBNX6Pfd5p+hSBqe/fEeNd7pc13QiAyGt7VdGMw4eRC4A==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      postcss: ^7.0.0 || ^8.0.1
+      webpack: ^5.0.0
+    dependencies:
+      cosmiconfig: 8.3.6(typescript@5.2.2)
+      jiti: 1.20.0
+      postcss: 8.4.31
+      semver: 7.5.4
+      webpack: 5.89.0
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   /postcss-logical@5.0.4(postcss@8.4.31):

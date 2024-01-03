@@ -1,7 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Colors } from '@common/styles';
+
 const Header = () => {
-    return <div style={{color : Colors.LightPurpleColor }}>common Header</div>;
+
+    return <header>
+        
+    </header>;
 };
 
 export default Header;
