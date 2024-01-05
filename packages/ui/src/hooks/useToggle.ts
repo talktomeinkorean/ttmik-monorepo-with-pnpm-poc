@@ -1,5 +1,25 @@
 import { useState } from "react";
-import type { Item } from "../dropdown";
+
+export interface Item {
+  id : string;
+  icon: string;
+  text: string;
+  description: string;
+}
+
+export interface DropdownProps {
+    isOpen: boolean;
+    setIsOpen: (isOpen: boolean) => void;
+    toggleDropdown: () => void;
+    handleKeyDown: (e: React.KeyboardEvent) => void;
+    selectedItem: Item | null;
+    setSelectedItem: (item: Item | null) => void;
+    getAriaAttributes: () => {
+      role: string;
+      "aria-expanded": boolean;
+      "aria-activedescendant": string | undefined;
+    };
+}
 
 const useDropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,18 +43,19 @@ const useDropdown = () => {
     };
     
     const toggleDropdown = ():void => {
-        setIsOpen(!isOpen);
-        }
+      setIsOpen(!isOpen);
+    }
   
     return {
       isOpen,
       setIsOpen,
+      
       toggleDropdown,
       handleKeyDown,
       selectedItem,
       setSelectedItem,
       getAriaAttributes,
     };
-  };
+};
   
-  export default useDropdown;
+export default useDropdown;
