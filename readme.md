@@ -36,3 +36,13 @@ pnpm install
 그리고 main과 dev 브랜치에 각각 올리면 알잘딱깔센으로 next.talktomeinkorean.kr에 내용이 반영됩니다
 
 https://next.talktomeinkorean.kr/
+
+## 명령어
+
+1. 특정 폴더에 패키지 추가하기
+
+```
+pn --filter next1 add -D tailwindcss
+```
+
+ pnpx create-turbo@latest -e with-tailwind         
