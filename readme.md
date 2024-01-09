@@ -46,3 +46,9 @@ pn --filter next1 add -D tailwindcss
 ```
 
  pnpx create-turbo@latest -e with-tailwind         
+
+
+
+ ## headless 하게 컴포넌트 설계하기
+
+ https://martinfowler.com/articles/headless-component.html#IntroducingTheHeadlessComponentPattern

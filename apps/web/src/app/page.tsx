@@ -1,17 +1,9 @@
 'use client';
 
 import { Card } from "@repo/ui/card";
-import type { DropdownProps } from "@repo/ui/dropdown";
-import { Dropdown } from "@repo/ui/dropdown";
 import { Header } from "@repo/ui/header";
 
 
-const item : DropdownProps['items'] = [{
-  "id": "1",
-  "icon": "https://turboapi.dev/icon/1",
-  "text": "Turbo",
-  "description": "Turbo is a framework for building monorepos with zero upfront configuration.",
-}]
 
 const LINKS = [
   {
@@ -42,7 +34,6 @@ export default function Page(): JSX.Element {
     <main className="flex flex-col items-center justify-between min-h-screen p-24">
       
       <Header/>
-      <Dropdown items={item}/>
 
       <div className="grid mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         {LINKS.map(({ title, href, description }) => (
