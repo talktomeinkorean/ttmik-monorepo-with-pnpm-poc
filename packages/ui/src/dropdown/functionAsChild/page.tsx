@@ -1,4 +1,4 @@
-import { DropdownList, DropdownTrigger } from "./dropdownV2/dropdown";
+import { DropdownList, DropdownTrigger } from "./dropdown";
 
 
 function exampleV2() {

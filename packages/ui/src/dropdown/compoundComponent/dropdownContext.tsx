@@ -8,6 +8,7 @@ export interface DropdownProps<T> {
     toggleDropdown?: () => void;
     selectedIndex?: number;
     selectedItem?: T | null;
+    handleKeyDown?: (event: React.KeyboardEvent) => void;
     updateSelectedItem?: (item: T) => void;
     dropdownRef?: RefObject<HTMLElement>;
     getAriaAttributes?: () => {

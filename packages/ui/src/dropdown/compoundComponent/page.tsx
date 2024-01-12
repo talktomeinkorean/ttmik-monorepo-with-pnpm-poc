@@ -1,5 +1,5 @@
 
-import { Dropdown } from "./dropdownV3/dropdown";
+import { Dropdown } from "./dropdown";
 
 
 function exampleV3() {
@@ -18,8 +18,10 @@ function exampleV3() {
         <span>Click me to open the dropdown</span>
       </Dropdown.Trigger>
       <Dropdown.List>
-        {items.map((item) => (
-          <li key={item.text}>{item.text}</li>
+        {items.map((item,index) => (
+          <Dropdown.Item index={index} item={item} key={item.text}>
+            {item.text}
+          </Dropdown.Item>
         ))}
       </Dropdown.List>
     </Dropdown>

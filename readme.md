@@ -49,6 +49,11 @@ pn --filter next1 add -D tailwindcss
 
 
 
- ## headless 하게 컴포넌트 설계하기
+ ## headless 하게 컴포넌트 설계하기 (dropdown)
 
  https://martinfowler.com/articles/headless-component.html#IntroducingTheHeadlessComponentPattern
+
+
+ ## Headless 컴포넌트 (checkbox)
+
+ https://www.howdy-mj.me/design/headless-components

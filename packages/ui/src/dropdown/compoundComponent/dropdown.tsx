@@ -42,13 +42,14 @@ Dropdown.Trigger = function Trigger({
   className?: string;
   children: React.ReactNode;
 }) {
-  const { toggleDropdown } = useDropdownContext();
+  const { toggleDropdown ,handleKeyDown } = useDropdownContext();
 
-  return <Component onClick={toggleDropdown} type="button" {...props} className={className}>
+  return <Component onClick={toggleDropdown} type="button" {...props} className={className}
+      onKeyPress={handleKeyDown}
+    >
     {children}
     </Component>;
 };
-
 
 Dropdown.List = function List({
   as: Component = "ul",
