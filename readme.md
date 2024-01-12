@@ -49,11 +49,16 @@ pn --filter next1 add -D tailwindcss
 
 
 
- ## headless 하게 컴포넌트 설계하기 (dropdown)
+# headless 하게 컴포넌트 설계하기
 
- https://martinfowler.com/articles/headless-component.html#IntroducingTheHeadlessComponentPattern
+## (dropdown) 예제
+
+https://martinfowler.com/articles/headless-component.html#IntroducingTheHeadlessComponentPattern
 
 
- ## Headless 컴포넌트 (checkbox)
+## (checkbox) 예제
 
- https://www.howdy-mj.me/design/headless-components
+https://www.howdy-mj.me/design/headless-components
+
+## react context
+https://react.dev/reference/react/createContext

@@ -2,6 +2,9 @@ import CheckboxCompoundComponent from "./checkbox/compoundComponent/page";
 import CheckboxCustomHooks from "./checkbox/customHooks/page";
 import CheckboxfunctionAsChild from "./checkbox/functionAsChild/page";
 import CheckboxOriginal from "./checkbox/original/page";
+import DropdownCustomHooks from "./dropdown/customHooks/page";
+import { DropdownNpm } from "./dropdown/npm/page";
+import DropdownOriginal from "./dropdown/original/page";
 
 
 export function Header(): JSX.Element {
@@ -10,7 +13,6 @@ export function Header(): JSX.Element {
     {/* checkboxOriginal */}
     <CheckboxOriginal/>
     <br/>
-
     {/* checkboxCompoundComponent */}
     <CheckboxCompoundComponent/>
     <br/>
@@ -20,10 +22,23 @@ export function Header(): JSX.Element {
      {/* checkboxCustomHooks */}
      <CheckboxCustomHooks/>
      <br/>
-  {/*     
-    <ExampleNpm/>
-    <ExampleV2/>
-    <ExampleV3/> */}
+
+     <br/>
+     <br/>
+
+    {/* dropdownOriginal */}
+    <DropdownOriginal/>
+
+    {/* dropdownNpm */}
+    <DropdownNpm/>
+    <br/>
+  
+    {/* DropdownCustomHooks */}
+    <DropdownCustomHooks/>
+    <br/>
+
+
+
   </div>
   );
 }

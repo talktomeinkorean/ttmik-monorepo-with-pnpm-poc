@@ -1,33 +1,33 @@
 import { Menu } from '@headlessui/react'
 
-export function ExampleNpm() {
+export function DropdownNpm() {
+
+  const items = [
+    { text: "Item 1" },
+    { text: "Item 2" },
+    { text: "Item 3" },
+    { text: "Item 4" },
+  ]
   return (
     <Menu>
-      <Menu.Button>More</Menu.Button>
+      <Menu.Button
+        className="ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors ui-border-neutral-700 hover:ui-bg-neutral-800/30"
+      >dropdown npm</Menu.Button>
       <Menu.Items>
-        <Menu.Item>
+
+      {items.map((item) => (
+        <Menu.Item key={item.text}>
           {({ active }) => (
-            <a
-              className={`${active && 'bg-blue-500'}`}
-              href="/account-settings"
+            <div
+              className={`${
+                active ? 'bg-blue-500 text-white' : 'text-gray-900'
+              } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
             >
-              Account settings
-            </a>
+              {item.text}
+            </div>
           )}
         </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              className={`${active && 'bg-blue-500'}`}
-              href="/account-settings"
-            >
-              Documentation
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item disabled>
-          <span className="opacity-75">Invite a friend (coming soon!)</span>
-        </Menu.Item>
+      ))}
       </Menu.Items>
     </Menu>
   )
