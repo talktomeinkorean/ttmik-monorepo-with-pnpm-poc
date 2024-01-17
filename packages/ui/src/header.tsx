@@ -3,6 +3,7 @@ import CheckboxCustomHooks from "./checkbox/customHooks/page";
 import CheckboxfunctionAsChild from "./checkbox/functionAsChild/page";
 import CheckboxOriginal from "./checkbox/original/page";
 import DropdownCustomHooks from "./dropdown/customHooks/page";
+import DropdownfunctionAsChild from "./dropdown/functionAsChildV2/page";
 import { DropdownNpm } from "./dropdown/npm/page";
 import DropdownOriginal from "./dropdown/original/page";
 
@@ -36,6 +37,10 @@ export function Header(): JSX.Element {
     {/* DropdownCustomHooks */}
     <DropdownCustomHooks/>
     <br/>
+
+     {/* DropdownfunctionAsChild */}
+      <DropdownfunctionAsChild/>
+      <br/>
 
 
 
